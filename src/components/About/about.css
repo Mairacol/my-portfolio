@@ -1,0 +1,53 @@
+/* Estilos generales para la sección 'Sobre mí' */
+.about {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+    padding: 40px 20px; /* Espaciado alrededor */
+}
+
+.about-content {
+    display: flex;
+    align-items: center; /* Centra verticalmente */
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.about-image {
+    width: 150px; /* Ancho de la imagen */
+    border-radius: 75px; /* Esquina redondeada */
+    box-shadow: 0px 0px 15px #8DF224; /* Sombra verde neón en modo claro */
+}
+
+.about-text {
+    max-width: 600px; /* Ancho máximo del texto */
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+/* Estilos para el título y párrafo en modo claro */
+.about h2 {
+    font-size: 2.5rem; /* Tamaño del encabezado */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    color: #8DF224; /* Color del título en modo claro */
+}
+
+.about p {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #ff00c1; /* Color del texto en modo claro */
+    margin-top: 10px; /* Margen superior para el párrafo */
+}
+
+/* Modo oscuro */
+.about.dark-mode {
+    background-color: #222; /* Fondo oscuro para la sección */
+}
+
+.about.dark-mode h2 {
+    color: #8DF224; /* Mantener el título verde en modo oscuro */
+}
+
+.about.dark-mode p {
+    color: white; /* Texto blanco en modo oscuro */
+}
+
+.about.dark-mode .about-image {
+    box-shadow: 0px 0px 15px #ff00c1; /* Sombra rosada en modo oscuro */
+}
