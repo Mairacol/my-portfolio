@@ -47,16 +47,72 @@ body {
 }
 
 .header a {
-  color: black;
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: black; /* Color del texto por defecto en modo claro */
+  text-decoration: none; /* Sin subrayado */
+  margin: 0 15px; /* Espaciado horizontal */
+  font-weight: bold; /* Texto en negrita */
+  transition: color 0.3s, transform 0.3s; /* Transición suave para color y transformación */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  position: relative; /* Necesario para el efecto de pseudo-elemento */
 }
 
-.header.dark-mode a {
-  color: white;
+/* Efecto al pasar el mouse */
+.header a:hover {
+  color: #8DF224; /* Cambia el color al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de levantamiento */
 }
+
+/* Agregar un pseudo-elemento para el subrayado animado */
+.header a::after {
+  content: ''; /* Necesario para el pseudo-elemento */
+  display: block; /* Hacerlo un bloque para controlarlo */
+  height: 2px; /* Altura del subrayado */
+  background: #8DF224; /* Color del subrayado */
+  width: 0; /* Inicialmente sin ancho */
+  transition: width 0.3s ease; /* Transición suave para el ancho */
+  position: absolute; /* Posicionar relativo al enlace */
+  left: 50%; /* Centrar horizontalmente */
+  bottom: -5px; /* Ubicarlo justo debajo del texto */
+  transform: translateX(-50%); /* Centrar el subrayado */
+}
+
+/* Animación del subrayado al hacer hover */
+.header a:hover::after {
+  width: 100%; /* Expandir el ancho del subrayado al 100% al hacer hover */
+}
+
+/* Estilo para el enlace activo */
+.header a.active {
+  color: #ff00c1; /* Color para el enlace activo */
+  border-bottom: 2px solid #8DF224; /* Subrayado inferior para resaltar el enlace activo */
+}
+
+/* Estilos para modo oscuro */
+.header.dark-mode a {
+  color: white; /* Color del texto en modo oscuro */
+}
+
+.header.dark-mode a:hover {
+  color: #8DF224; /* Color al pasar el mouse en modo oscuro */
+}
+
+.header.dark-mode a.active {
+  color: #ff00c1; /* Color para el enlace activo en modo oscuro */
+  border-bottom: 2px solid #8DF224; /* Subrayado inferior en modo oscuro */
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  align-items: center; /* Centra el contenido horizontalmente */
+  margin-top: 130px;
+}
+
+.mode-toggle {
+  cursor: pointer;
+  margin-bottom: 30px; /* Añadir espacio entre el botón y los enlaces */
+}
+
 
 /* Main Styles */
 .main-content {
@@ -91,17 +147,28 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* Color de fondo claro */
   padding: 20px;
   text-align: center;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
+  color: black; /* Color de texto claro */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave para el cambio de modo */
+  margin-top: auto; /* Asegura que el footer esté al final del contenedor */
 }
 
 .footer.dark-mode {
   background-color: #333; /* Fondo oscuro en modo oscuro */
   color: white; /* Texto blanco en modo oscuro */
-  border-top: 1px solid #444;
+  border-top: 1px solid #444; /* Borde superior en modo oscuro */
+}
+
+.footer-links a {
+  margin: 0 10px; /* Espaciado entre los enlaces del footer */
+  color: inherit; /* Asegura que los enlaces tengan el mismo color que el texto */
+  text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Subrayado al hacer hover */
 }
 
 /* Mode Toggle Styles */

@@ -1,22 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Header({ toggleDarkMode, darkMode }) {
+  // Estado para el enlace activo
+  const [activeLink, setActiveLink] = useState('');
+
+  // Función para manejar el clic en los enlaces
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
   return (
     <header className={`header ${darkMode ? 'dark-mode' : ''}`}>
       {/* Encabezado */}
       <div className="header-content">
         <h1>👩‍💻 Maira Colman</h1>
         <p>Front-End Developer</p>
-        <div className="header-links">
-          <a href="#about">Sobre Mí</a>
-          <br />
-          <a href="#projects">Proyectos</a>
-          <br />
-          <a href="#skills">Habilidades</a>
-          <br />
-          <a href="#contact">Contacto</a>
-          <br />
-        </div>
+
+        {/* Botón de Modo Oscuro */}
         <div 
           className={`mode-toggle ${darkMode ? 'active' : ''}`} 
           onClick={(e) => {
@@ -31,6 +31,41 @@ function Header({ toggleDarkMode, darkMode }) {
           <span className="mode-toggle-text">
             {darkMode ? "🌙" : "☀️"}
           </span>
+        </div>
+
+        <div className="header-links">
+          <a 
+            href="#about" 
+            className={activeLink === 'about' ? 'active' : ''} 
+            onClick={() => handleLinkClick('about')}
+          >
+            Sobre Mí
+          </a>
+          <br />
+          <a 
+            href="#projects" 
+            className={activeLink === 'projects' ? 'active' : ''} 
+            onClick={() => handleLinkClick('projects')}
+          >
+            Proyectos
+          </a>
+          <br />
+          <a 
+            href="#skills" 
+            className={activeLink === 'skills' ? 'active' : ''} 
+            onClick={() => handleLinkClick('skills')}
+          >
+            Habilidades
+          </a>
+          <br />
+          <a 
+            href="#contact" 
+            className={activeLink === 'contact' ? 'active' : ''} 
+            onClick={() => handleLinkClick('contact')}
+          >
+            Contacto
+          </a>
+          <br />
         </div>
       </div>
 
