@@ -25,13 +25,14 @@ body {
 .layout {
   display: flex;
   flex-direction: row;
-  height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+  height: 100vh; 
+  overflow: hidden;
 }
 
 /* Header Styles */
 .header {
   background-color: #f0f0f0;
-  padding: 20px;
+  padding: 5px;
   height: 100%; /* El header ocupa toda la altura */
   width: 50vw; /* El header ocupa la mitad izquierda */
   z-index: 100;
@@ -60,8 +61,7 @@ body {
 /* Main Styles */
 .main-content {
   width: 50vw; /* Ocupa la mitad derecha */
-  height: 100vh; /* Asegúrate de que tenga una altura fija */
-  
+  flex-grow: 1; 
  
   flex-direction: column;
   justify-content: flex-start;
