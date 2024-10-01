@@ -142,6 +142,7 @@ body {
 .main-content.dark-mode {
   background-color: #222; /* Fondo oscuro en modo oscuro */
   color: white; /* Texto blanco en modo oscuro */
+  height: 100vh;
 }
 
 
