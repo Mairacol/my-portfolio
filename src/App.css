@@ -58,16 +58,29 @@ body {
 }
 
 /* Main Styles */
-/* Main Styles */
 .main-content {
   width: 50vw; /* Ocupa la mitad derecha */
-  display: flex;
+  height: 100vh; /* Asegúrate de que tenga una altura fija */
+  
+ 
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 20px;
-  overflow: auto; /* Añade scroll si el contenido es más grande que la ventana */
+  padding: 5px;
+  overflow: auto; /* Permite el desplazamiento */
+  
   transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  position: relative; /* Necesario para el pseudo-elemento */
+}
+
+/* Para ocultar la barra de desplazamiento */
+.main-content::-webkit-scrollbar {
+  display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
+}
+
+/* Para Firefox, utiliza este truco para ocultar la barra de desplazamiento */
+.main-content {
+  scrollbar-width: none; /* Firefox */
 }
 
 .main-content.dark-mode {
@@ -103,7 +116,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px;
+  padding: 2px;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 0 15px rgba(141, 242, 36, 0.5); /* Efecto neón */
 }

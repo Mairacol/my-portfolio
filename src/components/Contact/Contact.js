@@ -20,7 +20,7 @@ function Contact({ darkMode }) {
 
   return (
     <section id="contact" className={`contact ${darkMode ? 'dark-mode' : ''}`} style={{ backgroundColor: darkMode ? '#222' : '#fff', color: darkMode ? '#fff' : '#000' }}>
-      <h2>Contacto 📫</h2>
+      <h2>Contacto </h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

@@ -20,7 +20,7 @@ function Projects({ darkMode }) {
 
   return (
     <section id="projects" className={`projects-section ${darkMode ? 'dark-mode' : ''}`}>
-      <h2>Proyectos 🌍</h2>
+      <h2>Proyectos </h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
           <div key={index} className={`project-card ${darkMode ? 'dark-mode' : ''}`}>
