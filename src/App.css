@@ -20,19 +20,25 @@ body {
   background-color: black; /* Fondo oscuro */
   color: white; /* Texto blanco en modo oscuro */
 }
+
+/* Layout Styles */
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 100vh; /* Asegura que el contenido ocupe toda la pantalla */
+}
+
 /* Header Styles */
 .header {
   background-color: #f0f0f0;
   padding: 20px;
-  position: fixed;
-  top: 0;
-  left: 0; /* Fija el header a la izquierda */
-  height: 100%; /* Hace que el header ocupe toda la altura de la ventana */
-  width: 250px; /* Ancho fijo del header */
+  height: 100%; /* El header ocupa toda la altura */
+  width: 50vw; /* El header ocupa la mitad izquierda */
   z-index: 100;
   display: flex;
-  flex-direction: column; /* Disposición en columna para enlaces */
-  transition: background-color 0.3s;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header.dark-mode {
@@ -50,11 +56,26 @@ body {
 .header.dark-mode a {
   color: white;
 }
+
+/* Main Styles */
+/* Main Styles */
 .main-content {
-  margin-left: 260px; /* Espacio para el header */
-  padding: 20px; /* Padding para el contenido principal */
-  flex: 1; /* Permite que el contenido principal ocupe el resto del espacio */
+  width: 50vw; /* Ocupa la mitad derecha */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  overflow: auto; /* Añade scroll si el contenido es más grande que la ventana */
+  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
 }
+
+.main-content.dark-mode {
+  background-color: #222; /* Fondo oscuro en modo oscuro */
+  color: white; /* Texto blanco en modo oscuro */
+}
+
+
 /* Footer Styles */
 .footer {
   background-color: #f0f0f0;
@@ -69,6 +90,7 @@ body {
   color: white; /* Texto blanco en modo oscuro */
   border-top: 1px solid #444;
 }
+
 /* Mode Toggle Styles */
 .mode-toggle {
   position: relative;
@@ -165,8 +187,8 @@ h1, h2 {
 }
 
 /* Sections Styles */
-.skills-section.dark-mode{
-  background-color: #222;/* Fondo oscuro */
+.skills-section.dark-mode {
+  background-color: #222; /* Fondo oscuro */
   color: white; /* Texto blanco */
 }
 .projects-section.dark-mode {
@@ -175,7 +197,6 @@ h1, h2 {
 }
 .projects-section, .skills-section, .contact {
   padding: 40px 20px;
-  /*margin: 20px 0;*/
   text-align: center;
 }
 
@@ -205,7 +226,6 @@ h1, h2 {
   border-radius: 10px;
 }
 
-
 /* Contact Form Styles */
 .contact form {
   display: flex;
@@ -228,104 +248,19 @@ h1, h2 {
 .contact input.dark-mode, .contact textarea.dark-mode {
   background-color: #222; /* Fondo oscuro en modo oscuro */
   color: white; /* Texto blanco en modo oscuro */
-  border: 1px solid #8DF224; /* Borde neón */
 }
 
 .contact button {
   background-color: #8DF224;
   color: white;
+  padding: 15px;
   border: none;
-  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .contact button:hover {
-  
-  background-color: #ff00c1;
-  box-shadow: 0 0 15px #ff00c1, 0 0 30px #ff00c1;
-}
-
-/* Skills Section Styles */
-/* Estilos generales para la sección */
-.skills-section {
-  padding: 40px 20px;
-
-  background-color: #f0f0f0; /* Fondo claro por defecto */
-  color: #333; /* Color del texto por defecto */
-}
-
-/* Modo oscuro: solo modifica el fondo y el color del texto */
-.skills-section.dark-mode {
-  background-color: #222;/* Fondo oscuro */
-  color: #fff; /* Texto blanco */
-}
-
-/* Estilos para los elementos de la lista */
-.skills-section ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.skills-section li {
-  list-style: none;
-  font-size: 18px;
-  color: #333; /* Color del texto por defecto */
-}
-
-/* Modo oscuro para los elementos de la lista */
-.skills-section li.dark-mode {
-  color: #fff; /* Color del texto en modo oscuro */
-}
-
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
-}
-
-
-/* Footer Links Styles */
-/* Footer Styles */
-.footer {
-  background-color: #f0f0f0;
-  padding: 20px;
-  text-align: center;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.footer.dark-mode {
-  background-color: #222; /* Fondo oscuro en modo oscuro */
-  color: white; /* Texto blanco en modo oscuro */
-  border-top: 1px solid #444;
-}
-
-.footer p {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #8DF224; /* Texto verde futurista */
-}
-
-/* Footer Links Styles */
-.footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.footer-links a {
-  color: #8DF224; /* Enlace verde */
-  margin: 0 10px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-links a:hover {
-  color: #ff00c1; /* Cambio de color al pasar el mouse */
+  background-color: #00eaff; /* Efecto al pasar el mouse */
+  transform: translateY(-3px); /* Efecto de levantamiento */
 }

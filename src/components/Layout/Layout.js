@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import '../../App.css'; // Asegúrate de importar los estilos si están en un archivo separado
+
 
 const Layout = ({ darkMode, setDarkMode, children }) => {
   return (
-    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
+    <div className={darkMode ? 'dark-mode layout' : 'light-mode layout'}>
       <Header darkMode={darkMode} toggleDarkMode={() => setDarkMode((prev) => !prev)} />
-      <main role="main">
+      <main role="main" className={`main-content ${darkMode ? 'dark-mode' : ''}`}>
         {children}
       </main>
-      <Footer darkMode={darkMode} />
     </div>
   );
 };
