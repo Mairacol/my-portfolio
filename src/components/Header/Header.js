@@ -13,7 +13,7 @@ function Header({ toggleDarkMode, darkMode }) {
     <header className={`header ${darkMode ? 'dark-mode' : ''}`}>
       {/* Encabezado */}
       <div className="header-content">
-        <h1>👩‍💻 Maira Colman</h1>
+        <h1>Maira Colman</h1>
         <p>Front-End Developer</p>
 
         {/* Botón de Modo Oscuro */}
@@ -71,7 +71,7 @@ function Header({ toggleDarkMode, darkMode }) {
 
       {/* Footer dentro del Header */}
       <footer className={`footer ${darkMode ? 'dark-mode' : ''}`}>
-        <p>&copy; 2024 Maira Colman 🌿 | Desarrolladora Front-End</p>
+        <p>&copy; 2024 Maira Colman  | Desarrolladora Front-End</p>
         <div className="footer-links">
           <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/tu-github" target="_blank" rel="noopener noreferrer">GitHub</a>

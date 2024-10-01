@@ -43,7 +43,7 @@ body {
 }
 
 .header.dark-mode {
-  background-color: #1a1a1a;
+  background-color: #222;
 }
 
 .header a {
@@ -157,7 +157,7 @@ body {
 }
 
 .footer.dark-mode {
-  background-color: #333; /* Fondo oscuro en modo oscuro */
+  background-color: #222; /* Fondo oscuro en modo oscuro */
   color: white; /* Texto blanco en modo oscuro */
   border-top: 1px solid #444; /* Borde superior en modo oscuro */
 }
@@ -230,41 +230,133 @@ body {
   color: #ff00c1; /* Texto neón rosado en modo oscuro */
 }
 
-/* Glitch Effect Styles */
-@keyframes glitch {
-  0% {
-    text-shadow: 2px 2px #8DF224, -2px -2px #8DF224;
-  }
-  20% {
-    text-shadow: 5px 5px #ff00c1, -5px -5px #00eaff;
-  }
-  40% {
-    text-shadow: -2px 0px #ff00c1, 2px -2px #8DF224;
-  }
-  60% {
-    text-shadow: 3px -3px #8DF224, -3px 3px #00eaff;
-  }
-  100% {
-    text-shadow: 2px 2px #8DF224, -2px -2px #ff00c1;
-  }
-}
-
-.glitch-text {
-  position: relative;
-  color: #8DF224; /* Verde neón */
-  animation: glitch 1s infinite;
-}
-
 /* Heading Styles */
+/* Variables de color */
+:root {
+  --color-neon-light: #FF1B8E; /* Rosa neón para modo claro */
+  --color-neon-dark: #8DF224; /* Verde neón para modo oscuro */
+}
+
+body {
+  background-color: #fff; /* Color de fondo para el modo claro */
+  color: #000; /* Color de texto para el modo claro */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+  background-color: #121212; /* Color de fondo para el modo oscuro */
+  color: #fff; /* Color de texto para el modo oscuro */
+}
+
+/* Estilos para los encabezados */
 h1, h2 {
-  color: #8DF224;
+  color: var(--color-neon-light); /* Color rosa neón por defecto */
   font-weight: 600;
   text-align: center;
   margin: 20px 0;
   position: relative;
-  font-size: 3rem;
-  letter-spacing: 2px;
-  animation: glitch 1.5s infinite;
+  font-size: 3rem; /* Puedes ajustar el tamaño según sea necesario */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-shadow: 0 0 2px rgba(255, 0, 193, 0.7), 0 0 4px rgba(255, 0, 193, 0.7); /* Sombra de luz LED más suave */
+  transition: text-shadow 0.3s; /* Transición suave para el efecto de sombra */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode h1, body.dark-mode h2 {
+  color: var(--color-neon-dark); /* Color verde neón en modo oscuro */
+  text-shadow: 0 0 3px var(--color-neon-dark), 0 0 5px var(--color-neon-dark); /* Sombra de luz LED más sutil en modo oscuro */
+}
+
+/* Agregar un efecto hover opcional para los encabezados */
+h1:hover, h2:hover {
+  text-shadow: 0 0 8px var(--color-neon-light), 0 0 12px var(--color-neon-light); /* Aumentar el efecto de luz LED al pasar el mouse */
+}
+
+/* Efecto hover en modo oscuro */
+body.dark-mode h1:hover, body.dark-mode h2:hover {
+  text-shadow: 0 0 8px var(--color-neon-dark), 0 0 12px var(--color-neon-dark); /* Aumentar el efecto de luz LED en modo oscuro */
+}
+
+
+
+/********** ESTILO BASE **********/
+/* Skills Section Styles */
+.skills-section {
+  padding: 40px 20px;
+  border-radius: 15px;
+  transition: background 0.5s ease, color 0.5s ease;
+  background: rgba(255, 255, 255, 0.8); /* Fondo ligeramente transparente */
+}
+
+/* Estilo para la sección de habilidades */
+.skills-title {
+  color: var(--color-neon-light); /* Color rosa neón por defecto */
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+  font-size: 3rem; /* Puedes ajustar el tamaño según sea necesario */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-shadow: 0 0 2px rgba(255, 0, 193, 0.7), 0 0 4px rgba(255, 0, 193, 0.7); /* Sombra de luz LED más suave */
+  transition: text-shadow 0.3s; /* Color rosa neón en modo claro */
+}
+
+/* Estilo para el modo oscuro */
+body.dark-mode .skills-title {
+  color: #8DF224; /* Color verde neón en modo oscuro */
+}
+
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
+  padding: 15px 25px; /* Más padding para un mejor efecto */
+  border-radius: 10px;
+  background: #f0f0f0; /* Color de fondo claro */
+  color: #000; /* Color de texto en modo claro */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Necesario para efectos de sombra */
+}
+
+/* Efecto hover para las habilidades */
+.skill-item:hover {
+  transform: translateY(-5px); /* Levantar ligeramente al pasar el mouse */
+  box-shadow: 0 8px 25px rgba(141, 242, 36, 0.3); /* Efecto de sombra al pasar el mouse */
+  background: #e0e0e0; /* Cambio de color de fondo al hover */
+}
+
+.skill-icon {
+  width: 30px; /* Ajusta el tamaño del ícono según tu diseño */
+  height: 30px; /* Ajusta el tamaño del ícono según tu diseño */
+}
+
+/* Estilos en modo oscuro */
+.skills-section.dark-mode {
+  background: rgba(34, 34, 34, 0.8); /* Fondo oscuro ligeramente transparente */
+}
+
+.skills-section.dark-mode .skills-title {
+  color: #8DF224; /* Mantener el color verde neón */
+}
+
+.skills-section.dark-mode .skill-item {
+  background: #444; /* Color de fondo oscuro para los items */
+  color: white; /* Color de texto blanco en modo oscuro */
+}
+
+.skills-section.dark-mode .skill-item:hover {
+  background: #555; /* Color más claro al hover en modo oscuro */
 }
 
 /* Sections Styles */
@@ -276,7 +368,7 @@ h1, h2 {
   background-color: #222; /* Fondo oscuro */
   color: white; /* Texto blanco */
 }
-.projects-section, .skills-section, .contact {
+.projects-section .contact {
   padding: 40px 20px;
   text-align: center;
 }
@@ -292,7 +384,7 @@ h1, h2 {
   background-color: #f0f0f0; /* Fondo claro en modo claro */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.2); /* Sombra neón */
+  box-shadow: 0 0 15px rgba(141, 242, 36, 0.5); /* Efecto neón */
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }

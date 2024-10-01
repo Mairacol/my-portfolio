@@ -3,35 +3,39 @@
     display: flex;
     justify-content: center; /* Centra el contenido */
     padding: 40px 20px; /* Espaciado alrededor */
+    background-color: #fff; /* Fondo blanco en modo claro */
 }
 
+/* Contenido de la sección */
 .about-content {
     display: flex;
-    align-items: center; /* Centra verticalmente */
+    flex-direction: column; /* Cambiar la dirección a columna */
+    align-items: center; /* Centrar verticalmente */
     gap: 20px; /* Espacio entre imagen y texto */
 }
 
+/* Imagen de la sección */
 .about-image {
     width: 150px; /* Ancho de la imagen */
     border-radius: 75px; /* Esquina redondeada */
     box-shadow: 0px 0px 15px #8DF224; /* Sombra verde neón en modo claro */
 }
 
+/* Texto de la sección */
 .about-text {
     max-width: 600px; /* Ancho máximo del texto */
     text-align: left; /* Alinear el texto a la izquierda */
 }
 
-/* Estilos para el título y párrafo en modo claro */
+/* Estilos para el título en modo claro */
 .about h2 {
     font-size: 2.5rem; /* Tamaño del encabezado */
     letter-spacing: 1px; /* Espaciado entre letras */
-    color: #8DF224; /* Color del título en modo claro */
 }
 
+/* Estilo para el párrafo en modo claro */
 .about p {
     font-size: 1rem; /* Tamaño del texto */
-    color: #ff00c1; /* Color del texto en modo claro */
     margin-top: 10px; /* Margen superior para el párrafo */
 }
 
@@ -49,5 +53,5 @@
 }
 
 .about.dark-mode .about-image {
-    box-shadow: 0px 0px 15px #ff00c1; /* Sombra rosada en modo oscuro */
+    box-shadow: 0px 0px 15px #ff00bf7b; /* Sombra rosada en modo oscuro */
 }
