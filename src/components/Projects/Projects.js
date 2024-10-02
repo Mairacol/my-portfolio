@@ -10,13 +10,13 @@ function Projects({ darkMode }) {
       repoUrl: 'https://github.com/beta-cancri/SalvandoHuellitas-Front-end',
       liveUrl: 'https://salvandohuellitas-front-end-production-5e5d.up.railway.app/',
     },
-    {
+    {/*{
       name: 'Otro Proyecto',
-      description: 'Breve descripción de tu proyecto. 🚀',
+      description: 'Breve descripción proyecto. 🚀',
       imageUrl: 'url-de-imagen',
       repoUrl: 'https://github.com/tu-repo',
       liveUrl: 'https://url-de-app',
-    }
+    }*/}
   ];
 
   return (
