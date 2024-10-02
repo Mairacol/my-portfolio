@@ -66,7 +66,7 @@ function Header({ toggleDarkMode, darkMode }) {
       </div>
 
       <footer className={`footer ${darkMode ? 'dark-mode' : ''}`}>
-        <p>&copy; 2024 Maira Colman  | Desarrolladora Front-End</p>
+        <p>&copy; Maira Colman  | Desarrolladora Front-End</p>
         <div className="footer-links">
           <a href="https://www.linkedin.com/in/tu-linkedin" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-linkedin" style={{ marginRight: '5px' }}></i>
