@@ -35,7 +35,7 @@ body {
   padding: 5px;
   height: 100%; /* El header ocupa toda la altura */
   width: 50vw; /* El header ocupa la mitad izquierda */
-  z-index: 100;
+  z-index: 20;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,15 +51,17 @@ body {
   text-decoration: none; /* Sin subrayado */
   margin: 0 15px; /* Espaciado horizontal */
   font-weight: bold; /* Texto en negrita */
-  transition: color 0.3s, transform 0.3s; /* Transición suave para color y transformación */
+  transition: color 0.3s, transform 0.3s, text-shadow 0.3s; /* Añadir transición para la sombra */
   font-size: 1.2rem; /* Tamaño de fuente */
   position: relative; /* Necesario para el efecto de pseudo-elemento */
+  text-shadow: 0 0 5px rgba(141, 242, 36, 0.5); /* Sombra de neón suave */
 }
 
 /* Efecto al pasar el mouse */
 .header a:hover {
   color: #8DF224; /* Cambia el color al pasar el mouse */
   transform: translateY(-3px); /* Efecto de levantamiento */
+  text-shadow: 0 0 10px rgba(141, 242, 36, 0.8); /* Aumenta la sombra al hacer hover */
 }
 
 /* Agregar un pseudo-elemento para el subrayado animado */
@@ -166,6 +168,11 @@ body {
   margin: 0 10px; /* Espaciado entre los enlaces del footer */
   color: inherit; /* Asegura que los enlaces tengan el mismo color que el texto */
   text-decoration: none; /* Quita el subrayado por defecto */
+}
+
+
+.footer-links i {
+  font-size: 30px; /* Ajusta el tamaño del ícono */
 }
 
 .footer-links a:hover {
@@ -387,7 +394,26 @@ body.dark-mode .skills-title {
   box-shadow: 0 0 15px rgba(141, 242, 36, 0.5); /* Efecto neón */
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  margin:20px;
 }
+.project-links {
+  margin-top: 10px; /* Espacio por encima de los enlaces, ajusta según sea necesario */
+}
+
+.project-links a {
+  margin-right: 10px; /* Espacio entre los enlaces */
+}
+.project-link {
+  margin-right: 10px; /* Espacio entre los enlaces */
+  color: #00ff40; /* Cambia este color por el que desees */
+  text-decoration: none; /* Elimina el subrayado si no lo quieres */
+}
+
+.project-link:hover {
+  color: #00ff40; /* Color al pasar el mouse sobre el enlace */
+  text-decoration: underline; /* O puedes agregar un subrayado al pasar el mouse */
+}
+
 
 .project-card.dark-mode {
   background-color: #222; /* Fondo oscuro en modo oscuro */
@@ -431,6 +457,9 @@ body.dark-mode .skills-title {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
+  margin: 10px;
+  align-content: center;
+  align-items: center;
 }
 
 .contact button:hover {

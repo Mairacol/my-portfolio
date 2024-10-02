@@ -4,6 +4,7 @@ import Projects from './components/Projects/Projects';
 import Skills from './components/Skills/Skills';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import CursorShadow from './components/CursorShadow/CursorShadow';
 import './App.css';
 
 
@@ -20,12 +21,15 @@ const App = () => {
   }, [darkMode]);
 
   return (
+    <>
+      <CursorShadow /> 
     <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
       <About id="about" isDarkMode={darkMode} /> {/* Pasar darkMode al componente About */}
       <Projects id="projects" darkMode={darkMode} /> {/* Si Projects usa darkMode, pásalo */}
       <Skills id="skills" darkMode={darkMode} /> {/* Si Skills usa darkMode, pásalo */}
       <Contact id="contact" darkMode={darkMode} /> {/* Si Contact usa darkMode, pásalo */}
     </Layout>
+    </>
   );
 };
 
