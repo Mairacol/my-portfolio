@@ -10,7 +10,7 @@ function About({ isDarkMode }) {
                 <div className="about-text">
                     <h2>Sobre mí</h2>
                     <p>
-                        Soy Maira Colman, profesora de educación física convertida en desarrolladora front-end. 
+                        Hola! Soy Maira Colman, profesora de educación física convertida en desarrolladora front-end. 
                         Me apasiona crear aplicaciones web que hagan la vida más fácil a los usuarios. 
                         Con un enfoque en el diseño minimalista y funcional, siempre busco mejorar mis habilidades y aprender nuevas tecnologías.
                     </p>

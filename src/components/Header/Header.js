@@ -77,7 +77,7 @@ function Header({ toggleDarkMode, darkMode }) {
            
           </a>
         </div>
-        <p>💬 <a href="/contact">Contáctame</a></p>
+       {/* <p>💬 <a href="/contact">Contáctame</a></p>*/}
       </footer>
     </header>
   );
