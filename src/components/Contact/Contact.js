@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com'; // Importa EmailJS
+import Notification from './Notification';
 
 function Contact({ darkMode }) {
   const [formData, setFormData] = useState({
@@ -7,6 +8,8 @@ function Contact({ darkMode }) {
     email: '',
     message: ''
   });
+  const [notification, setNotification] = useState({ message: '', type: '', visible: false });
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -29,11 +32,11 @@ function Contact({ darkMode }) {
         emailjs.send('service_fqdt0xo', 'template_e4wtu6f', emailParams, '6QCVQnfudy6PsXVgs')
           .then((response) => {
             console.log('Mensaje enviado exitosamente!', response.status, response.text);
-            alert('Mensaje enviado exitosamente!'); // Notificación de éxito
+            setNotification({ message: 'Mensaje enviado exitosamente!', type: 'success', visible: true });
           })
           .catch((error) => {
             console.error('Error al enviar el mensaje', error);
-            alert('Error al enviar el mensaje. Inténtalo de nuevo.'); // Notificación de error
+            setNotification({ message: 'Error al enviar el mensaje. Inténtalo de nuevo.', type: 'error', visible: true });
           });
       
         // Envío de correo de confirmación al usuario
@@ -66,7 +69,9 @@ const confirmationParams = {
           message: ''
         });
       };
-      
+      const closeNotification = () => {
+        setNotification({ ...notification, visible: false });
+      };
   return (
     <section
       id="contact"
@@ -165,6 +170,13 @@ const confirmationParams = {
           Enviar ✉️
         </button>
       </form>
+      {notification.visible && (
+        <Notification
+          message={notification.message}
+          type={notification.type}
+          onClose={closeNotification}
+        />
+      )}
     </section>
   );
 }
