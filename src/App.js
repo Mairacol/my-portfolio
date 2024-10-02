@@ -9,7 +9,7 @@ import './App.css';
 
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Efecto para agregar o quitar la clase dark-mode al body
   useEffect(() => {
