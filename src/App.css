@@ -31,7 +31,7 @@ body {
 
 /* Header Styles */
 .header {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   padding: 5px;
   height: 100%; /* El header ocupa toda la altura */
   width: 50vw; /* El header ocupa la mitad izquierda */
@@ -150,7 +150,7 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: #f0f0f0; /* Color de fondo claro */
+  background-color: #ffffff; /* Color de fondo claro */
   padding: 20px;
   text-align: center;
   color: black; /* Color de texto claro */
@@ -330,7 +330,7 @@ body.dark-mode .skills-title {
   font-size: 1.2rem;
   padding: 15px 25px; /* Más padding para un mejor efecto */
   border-radius: 10px;
-  background: #f0f0f0; /* Color de fondo claro */
+  background: #ff00bf63; /* Color de fondo claro */
   color: #000; /* Color de texto en modo claro */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative; /* Necesario para efectos de sombra */
@@ -339,8 +339,8 @@ body.dark-mode .skills-title {
 /* Efecto hover para las habilidades */
 .skill-item:hover {
   transform: translateY(-5px); /* Levantar ligeramente al pasar el mouse */
-  box-shadow: 0 8px 25px rgba(141, 242, 36, 0.3); /* Efecto de sombra al pasar el mouse */
-  background: #e0e0e0; /* Cambio de color de fondo al hover */
+  box-shadow: 0 8px 25px rgba(142, 242, 36, 0.472); /* Efecto de sombra al pasar el mouse */
+  background: #8DF224;/* Cambio de color de fondo al hover */
 }
 
 .skill-icon {
@@ -388,7 +388,7 @@ body.dark-mode .skills-title {
 }
 
 .project-card {
-  background-color: #f0f0f0; /* Fondo claro en modo claro */
+  background-color:  #ff00bf63; /* Fondo claro en modo claro */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(141, 242, 36, 0.5); /* Efecto neón */
