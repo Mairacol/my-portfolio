@@ -28,11 +28,11 @@ const CursorShadow = ({ isDarkMode }) => {
     window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+        window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [isDarkMode]); // Agrega isDarkMode como dependencia
 
-  return <div style={style}></div>;
+return <div style={style}></div>;
 };
 
 export default CursorShadow;
