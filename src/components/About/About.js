@@ -10,10 +10,13 @@ function About({ isDarkMode }) {
                 <div className="about-text">
                     <h2>Sobre mí</h2>
                     <p>
-                        Hola! Soy Maira Colman, profesora de educación física convertida en desarrolladora front-end. 
-                        Me apasiona crear aplicaciones web que hagan la vida más fácil a los usuarios. 
-                        Con un enfoque en el diseño minimalista y funcional, siempre busco mejorar mis habilidades y aprender nuevas tecnologías.
-                    </p>
+                    Hola, soy Maira Colman, una apasionada desarrolladora front-end con experiencia en JavaScript, ReactJS y CSS.
+                    <br></br>
+                    <br></br>
+                     Mi sólido background en docencia y pedagogía me ha permitido desarrollar habilidades valiosas, como la creatividad, el trabajo en equipo y la organización en entornos dinámicos. 
+                     <br></br>
+                     <br></br>
+                     Me especializo en la creación de interfaces responsivas y atractivas, utilizando metodologías ágiles y GIT. Estoy comprometida con el aprendizaje continuo y siempre busco oportunidades de capacitación para mejorar mis habilidades y contribuir efectivamente al desarrollo de aplicaciones web modernas.                    </p>
                 </div>
                 <img src={myImage} alt="Sobre mí" className="about-image" />
             </div>
