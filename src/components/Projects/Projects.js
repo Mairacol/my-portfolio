@@ -1,15 +1,23 @@
 import React from 'react';
-import projectImage from '../../assets/Screenshot_3.png'; // Ajusta la ruta según la estructura de tu proyecto
+import projectImage from '../../assets/Screenshot_3.png'; 
+import projectImage2 from '../../assets/Screenshot_5.png';
 
 function Projects({ darkMode }) {
   const projects = [
     {
-      name: 'Proyecto Salvando Huellitas',
+      name: 'Salvando Huellitas',
       description: 'Aplicación full-stack para adopción de mascotas. 🐶',
       imageUrl: projectImage,
       repoUrl: 'https://github.com/beta-cancri/SalvandoHuellitas-Front-end',
       liveUrl: 'https://salvandohuellitas-front-end-production-5e5d.up.railway.app/',
     },
+    {
+        name: 'Lista de tareas',
+        description: 'Aplicación de lista de tareas',
+        imageUrl: projectImage2, 
+        repoUrl: 'https://github.com/Mairacol/proyectofinal', 
+        liveUrl: 'https://notas.up.railway.app/', 
+      },
   ];
 
   return (
