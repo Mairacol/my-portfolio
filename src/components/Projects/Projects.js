@@ -13,7 +13,7 @@ function Projects({ darkMode }) {
     },
     {
         name: 'Lista de tareas',
-        description: 'Aplicación de lista de tareas',
+        description: 'Aplicación de lista de tareas.📋',
         imageUrl: projectImage2, 
         repoUrl: 'https://github.com/Mairacol/proyectofinal', 
         liveUrl: 'https://notas.up.railway.app/', 
