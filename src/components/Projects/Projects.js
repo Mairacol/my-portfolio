@@ -1,6 +1,7 @@
 import React from 'react';
 import projectImage from '../../assets/Screenshot_3.png'; 
 import projectImage2 from '../../assets/Screenshot_5.png';
+import projectImage3 from '../../assets/Screenshot_7.png';
 
 function Projects({ darkMode }) {
   const projects = [
@@ -17,6 +18,13 @@ function Projects({ darkMode }) {
         imageUrl: projectImage2, 
         repoUrl: 'https://github.com/Mairacol/proyectofinal', 
         liveUrl: 'https://notas.up.railway.app/', 
+      },
+      {
+        name: 'Dogs',
+        description: 'Aplicación de perros.🐶',
+        imageUrl: projectImage3, 
+        repoUrl: 'https://github.com/Mairacol/pi-dogsv/', 
+        liveUrl: 'https://www.youtube.com/watch?v=olCryaVue7Q', 
       },
   ];
 
