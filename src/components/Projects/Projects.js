@@ -28,6 +28,7 @@ function Projects({ darkMode }) {
       },
   ];
 
+  
   return (
     <section id="projects" className={`projects-section ${darkMode ? 'dark-mode' : ''}`}>
       <h2>Proyectos</h2>
