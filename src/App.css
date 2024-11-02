@@ -133,12 +133,52 @@ body {
 
 /* Para ocultar la barra de desplazamiento */
 .main-content::-webkit-scrollbar {
-  display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
+  display: auto; /* Oculta la barra de desplazamiento en navegadores WebKit */
 }
 
 /* Para Firefox, utiliza este truco para ocultar la barra de desplazamiento */
 .main-content {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: auto; /* Firefox */
+}
+/* Variables de color neón para el modo claro */
+:root {
+  --scrollbar-bg: #f0f0f0;
+  --scrollbar-thumb: #8DF224; /* Verde neón */
+  --scrollbar-thumb-hover: #8DF224;/* Verde neón más oscuro */
+}
+
+/* Variables de color neón para el modo oscuro */
+[data-theme="dark"] {
+  --scrollbar-bg: #1a1a1a;
+  --scrollbar-thumb: #ff00ff; /* Rosa neón */
+  --scrollbar-thumb-hover: #e600e6; /* Rosa neón más oscuro */
+}
+
+/* Barra de desplazamiento con colores neón */
+.main-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-bg);
+}
+
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 8px;
+  border: 2px solid var(--scrollbar-bg);
+  box-shadow: 0 0 10px var(--scrollbar-thumb); /* Brillo neón */
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+  box-shadow: 0 0 12px var(--scrollbar-thumb-hover); /* Efecto de brillo al pasar el mouse */
 }
 
 .main-content.dark-mode {

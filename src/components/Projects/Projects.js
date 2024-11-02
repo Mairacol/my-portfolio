@@ -17,7 +17,7 @@ function Projects({ darkMode }) {
       name: 'GAME STASH',
       description: 'Aplicación de compra/venta de cartas y juegos de mesa',
       imageUrl: projectImage4,
-      repoUrl: 'https://github.com/Game-Stash-MX/front-webpage',
+      repoUrl: 'Código privado',
       liveUrl: 'https://game-stash.mx/',
     },
     {
