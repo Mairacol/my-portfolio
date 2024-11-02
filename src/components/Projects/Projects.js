@@ -2,6 +2,7 @@ import React from 'react';
 import projectImage from '../../assets/Screenshot_3.png'; 
 import projectImage2 from '../../assets/Screenshot_5.png';
 import projectImage3 from '../../assets/Screenshot_7.png';
+import projectImage4 from '../../assets/Screenshot_8.png';
 
 function Projects({ darkMode }) {
   const projects = [
@@ -11,6 +12,13 @@ function Projects({ darkMode }) {
       imageUrl: projectImage,
       repoUrl: 'https://github.com/beta-cancri/SalvandoHuellitas-Front-end',
       liveUrl: 'https://salvandohuellitas-front-end-production-5e5d.up.railway.app/',
+    },
+    {
+      name: 'GAME STASH',
+      description: 'Aplicación de compra/venta de cartas y juegos de mesa',
+      imageUrl: projectImage4,
+      repoUrl: 'https://github.com/Game-Stash-MX/front-webpage',
+      liveUrl: 'https://game-stash.mx/',
     },
     {
         name: 'Lista de tareas',
