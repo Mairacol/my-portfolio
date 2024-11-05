@@ -5,6 +5,8 @@ import Skills from './components/Skills/Skills';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import CursorShadow from './components/CursorShadow/CursorShadow';
+import ScrollToTopButton from '../src/components/Scroll/ScrollToTopButton.component';
+
 import './App.css';
 
 
@@ -29,6 +31,7 @@ const App = () => {
       <Skills id="skills" darkMode={darkMode} /> {/* Si Skills usa darkMode, pásalo */}
       <Contact id="contact" darkMode={darkMode} /> {/* Si Contact usa darkMode, pásalo */}
     </Layout>
+    <ScrollToTopButton/>
     </>
   );
 };
