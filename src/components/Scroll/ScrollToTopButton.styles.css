@@ -4,6 +4,7 @@
     left: 20px;
     padding: 10px 15px;
     background-color: #8DF224; 
+    box-shadow: 0 0 10px #8DF224, 0 0 20px rgba(141, 242, 36, 0.5);
     color: black;
     border: none;
     border-radius: 50px;
@@ -22,5 +23,6 @@
   
   .scroll-to-top:hover {
     background-color: #8DF224;
+    
   }
   
