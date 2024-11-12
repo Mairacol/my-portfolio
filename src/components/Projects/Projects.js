@@ -3,6 +3,7 @@ import projectImage from '../../assets/Screenshot_3.png';
 import projectImage2 from '../../assets/Screenshot_5.png';
 import projectImage3 from '../../assets/Screenshot_7.png';
 import projectImage4 from '../../assets/Screenshot_8.png';
+import projectImage5 from '../../assets/Screenshot_10.png';
 
 function Projects({ darkMode }) {
   const projects = [
@@ -33,6 +34,13 @@ function Projects({ darkMode }) {
         imageUrl: projectImage3, 
         repoUrl: 'https://github.com/Mairacol/pi-dogsv/', 
         liveUrl: 'https://www.youtube.com/watch?v=olCryaVue7Q', 
+      },
+      {
+        name: 'Movies Search',
+        description: 'App para descubrir películas, ver tendencias, recibir recomendaciones y agregar a favoritos.',
+        imageUrl: projectImage5, 
+        repoUrl: 'https://github.com/Mairacol/Movies-Play', 
+        liveUrl: 'https://mairacol.github.io/Movies-Play/', 
       },
   ];
 
