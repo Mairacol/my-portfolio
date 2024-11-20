@@ -16,11 +16,32 @@
 
 /* Imagen de la sección */
 .about-image {
-    width: 150px; /* Ancho de la imagen */
-    border-radius: 75px; /* Esquina redondeada */
-    box-shadow: 0px 0px 15px #8DF224; /* Sombra verde neón en modo claro */
-}
-
+    width: 150px;
+    border-radius: 75px;
+    box-shadow: 0px 0px 15px #8DF224;
+    animation: bounceIn 1s ease-out;
+    transition: transform 1.5s ease, box-shadow 0.3s ease; /* Aumenté el tiempo de transición */
+    transform-style: preserve-3d; /* Permite que los efectos 3D funcionen correctamente */
+    
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: scale(0.5);
+    }
+    60% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .about-image:hover {
+    transform: rotateY(360deg); /* Giro 3D completo en el eje Y */
+    box-shadow: 0px 0px 25px rgba(141, 242, 36, 0.8); /* Sombra más intensa */
+  }
+  
 /* Texto de la sección */
 .about-text {
     max-width: 600px; /* Ancho máximo del texto */
