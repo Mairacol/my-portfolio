@@ -446,24 +446,39 @@ body.dark-mode .skills-title {
   box-shadow: 0 0 25px rgba(141, 242, 36, 0.8); /* Aumenta la intensidad de la sombra */
 }
 
+
 .project-links {
-  margin-top: 10px; /* Espacio por encima de los enlaces, ajusta según sea necesario */
+  margin-top: 20px; 
+  display: flex; 
+  gap: 40px; 
+  justify-content: center;
 }
-
-.project-links a {
-  margin-right: 10px; /* Espacio entre los enlaces */
-}
-
 .project-link {
-  margin-right: 10px; /* Espacio entre los enlaces */
-  color: #00ff40; /* Cambia este color por el que desees */
-  text-decoration: none; /* Elimina el subrayado si no lo quieres */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 30px; /* Tamaño del texto */
+  display: inline-flex; /* Alineación de íconos y texto */
+  align-items: center; /* Centrado vertical */
+  gap: 5px; /* Espacio entre icono y texto */
+  color: #ffffff; /* Blanco por defecto */
+  text-shadow: 0 0 5px #ffffff; /* Sombra inicial */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave */
 }
 
 .project-link:hover {
-  color: #00ff40; /* Color al pasar el mouse sobre el enlace */
-  text-decoration: underline; /* Agrega un subrayado al pasar el mouse */
+  color: #8DF224; /* Verde neon al pasar el mouse */
+  text-shadow: 0 0 25px rgba(141, 242, 36, 0.8); /* Sombra intensa */
+  transform: scale(1.1);
 }
+
+.project-link i {
+  text-shadow: 0 0 5px #ffffff; /* Sombra inicial para íconos */
+  transition: text-shadow 0.3s ease; /* Transición suave */
+}
+
+.project-link:hover i {
+  text-shadow: 0 0 25px rgba(141, 242, 36, 0.8); /* Sombra intensa para íconos */
+}
+
 
 .project-card.dark-mode {
   background-color: #222; /* Fondo oscuro en modo oscuro */
