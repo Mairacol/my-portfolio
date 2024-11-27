@@ -22,7 +22,7 @@
     "deploy": "gh-pages -d build", 
     "heroku-postbuild": "npm run build"
   },
-  "homepage": "https://mairacol.github.io/my-portfolio/",
+  "homepage": "https://Mairacol.github.io/my-portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
