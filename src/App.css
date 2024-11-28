@@ -2,8 +2,6 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  line-height: 1.6; /* Espaciado de líneas para mayor legibilidad */
-  background-color: white; /* Modo claro por defecto */
   transition: background-color 0.3s, color 0.3s;
   color: black;
 }
@@ -42,8 +40,8 @@ body {
   align-items: center;
 }
 
-.header.dark-mode {
-  background-color: #222;
+header.dark-mode {
+  background-color: rgb(34, 34, 34);
 }
 
 .header a {
@@ -547,20 +545,21 @@ body.dark-mode .skills-title {
     top: 0; /* No es necesario, se omite al ser static */
     left: 0; /* Alinea el header al borde izquierdo */
     z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    
   }
   .header.dark-mode{
     width: 100%;
-    margin-top: 10vh; /* Espacio superior opcional */
-    padding: 5px 10px; /* Ajusta el padding según lo desees */
-    height: 50px; /* Altura del Header en pantallas pequeñas */
-    position: sticky; /* Deja que el header se desplace con el scroll */
-    top: 0; /* No es necesario, se omite al ser static */
-    left: 0; /* Alinea el header al borde izquierdo */
-    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+    margin-top: 10vh; 
+    padding: 5px 10px; 
+    height: 50px; 
+    position: sticky; 
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
     background-color: #222;
   }
   .header-links {
-    display: none; /* Oculta los enlaces en pantallas pequeñas */
+    display: none; 
   }
 
   .main-content {
