@@ -74,7 +74,6 @@ function Header({ toggleDarkMode, darkMode }) {
           </a>
           <a href="https://github.com/Mairacol" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github" style={{ marginRight: '5px' }}></i>
-           
           </a>
         </div>
        {/* <p>💬 <a href="/contact">Contáctame</a></p>*/}
