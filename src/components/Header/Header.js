@@ -64,7 +64,7 @@ function Header({ toggleDarkMode, darkMode }) {
           <br />
         </div>
       </div>
-
+      
       <footer className={`footer ${darkMode ? 'dark-mode' : ''}`}>
         <p>&copy; Maira Colman  | Desarrolladora Front-End</p>
         <div className="footer-links">
@@ -81,5 +81,4 @@ function Header({ toggleDarkMode, darkMode }) {
     </header>
   );
 }
-
 export default Header;
