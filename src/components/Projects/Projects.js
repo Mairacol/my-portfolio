@@ -4,7 +4,7 @@ import projectImage2 from '../../assets/Screenshot_5.png';
 import projectImage3 from '../../assets/Screenshot_7.png';
 import projectImage4 from '../../assets/Screenshot_8.png';
 import projectImage5 from '../../assets/Screenshot_10.png';
-
+import projectImage6 from '../../assets/Screenshot_1 (2).png';
 function Projects({ darkMode }) {
   const projects = [
     {
@@ -27,6 +27,13 @@ function Projects({ darkMode }) {
         imageUrl: projectImage2, 
         repoUrl: 'https://github.com/Mairacol/proyectofinal', 
         liveUrl: 'https://notas.up.railway.app/', 
+      },
+      {
+        name: 'My E-commerce',
+        description: 'Simulación E-commerce',
+        imageUrl: projectImage6, 
+        repoUrl: 'https://github.com/Mairacol/e-commerce', 
+        liveUrl: 'https://mairacol.github.io/e-commerce/home', 
       },
       {
         name: 'Dogs',
