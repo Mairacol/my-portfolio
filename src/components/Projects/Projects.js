@@ -4,7 +4,7 @@ import projectImage2 from '../../assets/Screenshot_5.png';
 import projectImage3 from '../../assets/Screenshot_7.png';
 import projectImage4 from '../../assets/Screenshot_8.png';
 import projectImage5 from '../../assets/Screenshot_10.png';
-import projectImage6 from '../../assets/Screenshot_1 (2).png';
+import projectImage6 from '../../assets/Screenshot_1.png';
 import projectImage12 from '../../assets/Screenshot_12.png';
 function Projects({ darkMode }) {
   const projects = [
@@ -13,7 +13,7 @@ function Projects({ darkMode }) {
       description: 'Aplicación full-stack de Asesoría Financiera',
       imageUrl: projectImage12,
       repoUrl: 'Código privado',
-      liveUrl: 'https://staging.dlkgez7i5tr7u.amplifyapp.com/',
+      liveUrl: 'https://impulsomerval.com/',
     },
     {
       name: 'Salvando Huellitas',
