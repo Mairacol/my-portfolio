@@ -84,92 +84,38 @@ const confirmationParams = {
       }}
     >
       <h2>Contacto</h2>
-      <form
-        onSubmit={handleSubmit}
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          width: '100%',
-          maxWidth: '400px',
-          margin: '0 auto'
-        }}
-      >
-        <input
-          type="text"
-          name="name"
-          placeholder="Tu nombre"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          style={{
-            backgroundColor: darkMode ? '#333' : '#fff',
-            color: darkMode ? '#fff' : '#000',
-            width: '100%',
-            marginBottom: '10px',
-            padding: '10px',
-            border: `1px solid ${darkMode ? '#8DF224' : '#8DF224'}`,
-            borderRadius: '4px'
-          }}
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Tu email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          style={{
-            backgroundColor: darkMode ? '#333' : '#fff',
-            color: darkMode ? '#fff' : '#000',
-            width: '100%',
-            marginBottom: '10px',
-            padding: '10px',
-            border: `1px solid ${darkMode ? '#8DF224' : '#8DF224'}`,
-            borderRadius: '4px'
-          }}
-        />
-        <textarea
-          name="message"
-          placeholder="Tu mensaje"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          style={{
-            backgroundColor: darkMode ? '#333' : '#fff',
-            color: darkMode ? '#fff' : '#000',
-            width: '100%',
-            marginBottom: '10px',
-            padding: '10px',
-            border: `1px solid ${darkMode ? '#8DF224' : '#8DF224'}`,
-            borderRadius: '4px',
-            resize: 'vertical'
-          }}
-        />
-        <button
-          type="submit"
-          style={{
-            backgroundColor: darkMode ? '#444' : '#222',
-            color: '#fff',
-            padding: '10px 20px',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-            transition: 'background 0.3s ease, box-shadow 0.3s ease',
-            width: '100%',
-            maxWidth: '200px',
-            marginTop: '10px',
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = `0 0 20px 5px rgba(141, 242, 36, 0.8)`; // Sombra LED verde
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = 'none'; // Eliminar la sombra al salir
-          }}
-        >
-          Enviar ✉️
-        </button>
-      </form>
+      <form onSubmit={handleSubmit} className="contact-form">
+  <input
+    type="text"
+    name="name"
+    placeholder="Tu nombre"
+    value={formData.name}
+    onChange={handleChange}
+    required
+    className="input"
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Tu email"
+    value={formData.email}
+    onChange={handleChange}
+    required
+    className="input"
+  />
+  <textarea
+    name="message"
+    placeholder="Tu mensaje"
+    value={formData.message}
+    onChange={handleChange}
+    required
+    className="input"
+  />
+  <button type="submit" className="submit-button">
+    Enviar ✉️
+  </button>
+</form>
+
       {notification.visible && (
         <Notification
           message={notification.message}

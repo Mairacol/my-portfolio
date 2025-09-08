@@ -9,29 +9,24 @@ import ScrollToTopButton from '../src/components/Scroll/ScrollToTopButton.compon
 
 import './App.css';
 
-
 const App = () => {
   const [darkMode, setDarkMode] = useState(true);
 
-  // Efecto para agregar o quitar la clase dark-mode al body
+  // ✅ Setear el atributo data-theme en <html>
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
   }, [darkMode]);
 
   return (
     <>
       <CursorShadow /> 
-    <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
-      <About id="about" isDarkMode={darkMode} /> {/* Pasar darkMode al componente About */}
-      <Projects id="projects" darkMode={darkMode} /> {/* Si Projects usa darkMode, pásalo */}
-      <Skills id="skills" darkMode={darkMode} /> {/* Si Skills usa darkMode, pásalo */}
-      <Contact id="contact" darkMode={darkMode} /> {/* Si Contact usa darkMode, pásalo */}
-    </Layout>
-    <ScrollToTopButton/>
+      <Layout darkMode={darkMode} setDarkMode={setDarkMode}>
+        <About id="about" isDarkMode={darkMode} />
+        <Projects id="projects" darkMode={darkMode} />
+        <Skills id="skills" darkMode={darkMode} />
+        <Contact id="contact" darkMode={darkMode} />
+      </Layout>
+      <ScrollToTopButton />
     </>
   );
 };
