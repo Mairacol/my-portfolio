@@ -76,12 +76,7 @@ const confirmationParams = {
     <section
       id="contact"
       className={`contact ${darkMode ? 'dark-mode' : ''}`}
-      style={{
-        backgroundColor: darkMode ? '#222' : '#fff',
-        color: darkMode ? '#fff' : '#000',
-        padding: '20px',
-        textAlign: 'center',
-      }}
+      
     >
       <h2>Contacto</h2>
       <form onSubmit={handleSubmit} className="contact-form">
