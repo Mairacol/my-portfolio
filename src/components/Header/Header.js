@@ -11,7 +11,7 @@ function Header({ toggleDarkMode, darkMode }) {
     <header className={`header ${darkMode ? 'dark-mode' : ''}`}>
       <div className="header-content">
         <h1>Maira Colman</h1>
-        <p>Front-End Developer</p>
+        <p>Full Stack Developer</p>
 
         <div 
           className={`mode-toggle ${darkMode ? 'active' : ''}`} 
@@ -74,7 +74,7 @@ function Header({ toggleDarkMode, darkMode }) {
       <i className="fab fa-github"></i>
     </a>
   </div>
-  <p className="footer-copy">&copy; Maira Colman | Desarrolladora Front-End</p>
+  <p className="footer-copy">&copy; Maira Colman | Full Stack Developer</p>
 </footer>
 
     </header>
