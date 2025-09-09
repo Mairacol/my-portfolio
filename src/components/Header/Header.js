@@ -13,21 +13,27 @@ function Header({ toggleDarkMode, darkMode }) {
         <h1>Maira Colman</h1>
         <p>Full Stack Developer</p>
 
-        <div 
-          className={`mode-toggle ${darkMode ? 'active' : ''}`} 
-          onClick={(e) => {
-            e.stopPropagation();
-            toggleDarkMode();
-          }}
-          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          role="button"
-          tabIndex={0}
-          onKeyPress={(e) => { if (e.key === 'Enter') toggleDarkMode(); }}
-        >
-          <span className="mode-toggle-text">
-            {darkMode ? "🌙" : "☀️"}
-          </span>
-        </div>
+     <div
+  className={`mode-toggle-switch ${darkMode ? 'is-dark' : 'is-light'}`}
+  onClick={(e) => {
+    e.stopPropagation();
+    toggleDarkMode();
+  }}
+  role="button"
+  tabIndex={0}
+  aria-pressed={darkMode}
+  aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') toggleDarkMode(); }}
+>
+  <span className="mode-label">
+    {darkMode ? 'NIGHT MODE' : 'DAY MODE'}
+  </span>
+  <span className="mode-thumb">
+    <i className={darkMode ? 'fa-solid fa-moon' : 'fa-solid fa-sun'} />
+  </span>
+</div>
+
+
 
         <div className="header-links">
           <a 
