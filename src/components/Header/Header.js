@@ -3,13 +3,12 @@ import React, { useState } from 'react';
 function Header({ toggleDarkMode, darkMode }) {
   const [activeLink, setActiveLink] = useState('');
 
-  /* 🔹 NUEVO: estado para el menú mobile */
+ 
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
 
-    /* 🔹 NUEVO: cerrar menú al navegar en mobile */
     setMenuOpen(false);
   };
 
@@ -19,7 +18,6 @@ function Header({ toggleDarkMode, darkMode }) {
         <h1>Maira Colman</h1>
         <p>Full Stack Developer</p>
 
-        {/* 🔹 NUEVO: botón hamburguesa (solo se ve en mobile por CSS) */}
         <button
           className={`hamburger ${menuOpen ? 'is-open' : ''}`}
           aria-label="Abrir menú"
@@ -52,7 +50,6 @@ function Header({ toggleDarkMode, darkMode }) {
           </span>
         </div>
 
-        {/* 🔹 CAMBIO MÍNIMO: agrego id y clase condicional para mobile */}
         <div
           id="mobile-links"
           className={`header-links ${menuOpen ? 'is-open' : ''}`}
@@ -92,7 +89,7 @@ function Header({ toggleDarkMode, darkMode }) {
         </div>
       </div>
 
-      {/* 🔹 NUEVO: backdrop sólo en mobile (se controla por CSS) */}
+
       <div
         className={`backdrop ${menuOpen ? 'show' : ''}`}
         onClick={() => setMenuOpen(false)}
