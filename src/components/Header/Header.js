@@ -17,6 +17,11 @@ function Header({ toggleDarkMode, darkMode }) {
       <div className="header-content">
         <h1>Maira Colman</h1>
         <p>Full Stack Developer</p>
+<a className="btn-cv" href={`${process.env.PUBLIC_URL}/MairaColmanCV.pdf`} download="MairaColmanCV.pdf">
+  <i className="fa-solid fa-download" aria-hidden="true"></i>
+  Descargar CV
+</a>
+
 
         <button
           className={`hamburger ${menuOpen ? 'is-open' : ''}`}
